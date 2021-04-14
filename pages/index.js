@@ -44,14 +44,14 @@ export default function Home() {
           backgroundSize: "40px 40px",
           backgroundPosition: "0 0,20px 20px",
         }}
-        className="rounded p-8  pt-0 "
+        className="rounded p-4  md-plus:p-8 md-plus:pt-0 "
       >
         <Nav />
         <Heading />
         <SearchBox />
       </div>
 
-      <div className="w-full md:max-w-7xl md:mx-auto mt-36 p-7 pt-0">
+      <div className="w-full md:max-w-7xl md:mx-auto mt-36 p-4  pt-0">
         <div className="flex mt-16">
           <div className="w-full  md-plus:w-5/12   md-plus:mr-4 self-start">
             <div className="text text-gray-500 mb-4 font-medium">

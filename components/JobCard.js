@@ -3,10 +3,10 @@ export function JobCard({ handleOpen }) {
   return (
     <div
       onClick={handleOpen}
-      className="bg-white  group   mb-5 cursor-pointer   shadow-sm hover:shadow border-[1px]  border-gray-300 flex  justify-between p-4 rounded"
+      className="bg-white  group rounded   mb-5 cursor-pointer   border-[1.7px]   border-gray-200 flex  justify-between p-4 pt-6 pb-6"
     >
       <div>
-        <p className="text-xl text-gray-800 font-normal mr-1 mb-1 group-hover:underline">
+        <p className="text-lg text-gray-800 font-medium  mr-1 mb-1 group-hover:underline">
           Humbly Confident Senior Full Stack Developer
         </p>
         <p className="text-gray-400 ">
@@ -15,7 +15,7 @@ export function JobCard({ handleOpen }) {
         </p>
       </div>
       <div className="flex flex-col items-end">
-        <p className="text-right text-xs text-gray-500 p-1 mb-4 flex">
+        <p className="text-right text-xs text-white mb-4 bg-blue-600 rounded p-1  flex">
           <span className="mr-1">
             <GlobeIcon className="h-4 w-4 " />
           </span>

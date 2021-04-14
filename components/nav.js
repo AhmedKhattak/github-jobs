@@ -1,7 +1,11 @@
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { QuestionMarkCircleIcon, MenuAlt3Icon } from "@heroicons/react/solid";
+import {
+  QuestionMarkCircleIcon,
+  MenuAlt3Icon,
+  XIcon,
+} from "@heroicons/react/solid";
 import { motion, AnimatePresence } from "framer-motion";
 import { useMediaQuery } from "react-responsive";
 import ClickAwayListener from "react-click-away-listener";
@@ -23,8 +27,8 @@ export function Nav() {
 
   return (
     <ClickAwayListener onClickAway={() => setS(false)}>
-      <nav className=" h-16 flex items-center  inset-x-0 z-50 relative ">
-        <div className=" flex flex-row items-center justify-between w-full md:max-w-7xl md:mx-auto  p-3">
+      <nav className=" h-16 flex items-center md-plus:pt-5   z-50 relative ">
+        <div className=" flex flex-row items-center justify-between w-full md:max-w-7xl md:mx-auto pl-3 pr-3 pb-3">
           <div className="flex items-center">
             <Image width={20} height={20} src="/images/github.svg" />
             <span className="text-xl text-indigo-900 ml-3 font-bold">
@@ -34,14 +38,16 @@ export function Nav() {
 
           <div
             onClick={toggle}
-            className=" hover:border-indigo-900 transition border-2 p-2 cursor-pointer rounded"
+            className=" md-plus:hidden transition border-2 p-2 cursor-pointer rounded"
           >
-            <MenuAlt3Icon className="h-5 w-5 sm:hidden text-indigo-900" />
+            <MenuAlt3Icon className="h-5 w-5 hover:text-purple-600 sm:hidden text-indigo-900" />
           </div>
 
           <div className="space-x-4 text-indigo-900 font-medium hidden sm:flex ">
             <Link href="/about">
-              <p className="hover:underline rounded  text-indigo">About</p>
+              <p className="hover:underline rounded cursor-pointer  text-indigo">
+                About
+              </p>
             </Link>
 
             <a
@@ -63,33 +69,50 @@ export function Nav() {
         <AnimatePresence>
           {s && (
             <motion.div
-              animate={{ opacity: 1, y: 84 + 30 }}
-              initial={{ opacity: 0, y: 84 }}
-              exit={{ opacity: 0, y: 84 }}
+              animate={{ opacity: 1, height: "auto" }}
+              initial={{ opacity: 0, height: 200 }}
+              exit={{ opacity: 0, height: 200 }}
               transition={{
-                duration: hideMenu ? 0 : 0.18,
-                easings: "easeInOut",
+                duration: hideMenu ? 0 : 0.2,
+                easings: "linear",
               }}
-              className="absolute left-0 flex border-purple-200 border-2 right-0 w-full p-3 shadow-xl bg-white rounded-md    flex-col"
+              className="absolute space-y-2  flex top-[-5px] left-0  right-0 -mr-2 -ml-2  border-purple-200 border-2 pt-[9px]    pb-1 shadow-xl bg-white rounded-md    flex-col"
             >
-              <p className=" text-indigo p-2 font-medium cursor-pointer hover:bg-purple-200 rounded">
-                <Link href="/about">About</Link>
-              </p>
+              <div className="flex flex-row items-center  justify-between w-full  pl-[18px] pr-[18px]">
+                <div className="flex items-center">
+                  <Image width={20} height={20} src="/images/github.svg" />
+                  <span className="text-xl text-indigo-900 ml-3 font-bold">
+                    <Link href="/">GitHub Jobs</Link>
+                  </span>
+                </div>
 
-              <a
-                className=" no-underline font-medium    text-indigo p-2 hover:bg-purple-200 rounded"
-                href="https://www.linkedin.com/in/ahmedkhattak/"
-                target="_blank"
-              >
-                LinkedIn
-              </a>
-              <a
-                className=" no-underline font-medium  text-indigo p-2 hover:bg-purple-200 rounded"
-                href="https://github.com/AhmedKhattak"
-                target="_blank"
-              >
-                GitHub
-              </a>
+                <div
+                  onClick={toggle}
+                  className=" hover:border-indigo-900 transition border-2 p-2 cursor-pointer rounded"
+                >
+                  <XIcon className="h-5 w-5 sm:hidden text-indigo-900" />
+                </div>
+              </div>
+              <div className="flex flex-col p-3">
+                <p className=" text-indigo pl-3 pt-3 pb-3 font-medium cursor-pointer hover:bg-purple-200 rounded">
+                  <Link href="/about">About</Link>
+                </p>
+
+                <a
+                  className=" no-underline font-medium    text-indigo pl-3 pt-3 pb-3 hover:bg-purple-200 rounded"
+                  href="https://www.linkedin.com/in/ahmedkhattak/"
+                  target="_blank"
+                >
+                  LinkedIn
+                </a>
+                <a
+                  className=" no-underline font-medium  text-indigo pl-3 pt-3 pb-3 hover:bg-purple-200 rounded"
+                  href="https://github.com/AhmedKhattak"
+                  target="_blank"
+                >
+                  GitHub
+                </a>
+              </div>
             </motion.div>
           )}
         </AnimatePresence>

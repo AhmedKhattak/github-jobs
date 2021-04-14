@@ -1,4 +1,10 @@
-import { XIcon, ArrowLeftIcon, BriefcaseIcon } from "@heroicons/react/solid";
+import {
+  XIcon,
+  ArrowLeftIcon,
+  BriefcaseIcon,
+  CollectionIcon,
+  CursorClickIcon,
+} from "@heroicons/react/solid";
 import ReactMarkdown from "react-markdown";
 import Image from "next/image";
 
@@ -17,37 +23,38 @@ export function Details({ show = false, handleClose }) {
     <>
       <AnimatePresence exitBeforeEnter>
         {!show && toggleLayout && (
-          <div
+          <motion.div
+            animate={{ opacity: 1 }}
+            initial={{ opacity: 0 }}
+            exit={{ opacity: 0 }}
+            transition={{
+              duration: toggleLayout ? 0 : 0.18,
+              easings: "easeOut",
+            }}
             style={{ height: "95vh" }}
-            className="sticky top-2 w-7/12 self-start  "
+            className="sticky top-5 mt-10 w-7/12 self-start z-[1]  "
           >
-            <div className=" h-1/4 flex justify-center items-center  bg-purple-100 rounded-md p-4 w-full">
-              <div className="flex flex-col items-center">
-                <div className="h-12 w-12  bg-purple-500 rounded-full flex items-center justify-center mb-6">
-                  <BriefcaseIcon className="h-6 w-6 text-white" />
-                </div>
-                <div className="flex items-center ">
-                  <ArrowLeftIcon className="h-5 w-5 mr-4 text-indigo-800" />
-                  <span className="text-lg font-medium text-indigo-800">
-                    Select a job to view its details
-                  </span>
-                </div>
-              </div>
+            <div className="flex items-center h-16 rounded border-gray-300 border-[1px] bg-gray-50 p-2 ">
+              <ArrowLeftIcon className="h-5 w-5 mr-4" />
+              <span className="text-lg font-medium">
+                Select a job to view its details
+              </span>
             </div>
-          </div>
+          </motion.div>
         )}
         {show && (
           <motion.div
+            key="details"
             animate={{ opacity: 1, y: 0 }}
             initial={{ opacity: 0, y: 100 }}
             exit={{ opacity: 0, y: 100 }}
             transition={{
-              duration: toggleLayout ? 0 : 0.24,
+              duration: toggleLayout ? 0 : 0.22,
               easings: "easeInOut",
             }}
             className={`${
               toggleLayout
-                ? "sticky top-2    w-7/12  md-plus:block   text-white self-start"
+                ? "sticky top-5 mt-10    w-7/12  md-plus:block   text-white self-start"
                 : "fixed  left-0   top-0 right-0 z-[999]    md-plus:block   text-white self-start"
             }`}
           >
@@ -89,7 +96,7 @@ export function Details({ show = false, handleClose }) {
               </div>
             </div>
             <div
-              style={{ height: toggleLayout ? "95vh" : "100vh" }}
+              style={{ height: toggleLayout ? "90vh" : "100vh" }}
               className={`overflow-scroll ${
                 toggleLayout && "rounded-t-md "
               } rounded-t-md rounded-b-md border-l-2 border-r-2 border-b-2 border-gray-600  bg-white shadow-md prose max-w-none p-5 w-full`}

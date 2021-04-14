@@ -14,12 +14,13 @@ export function Pagination() {
       <span className="p-2 h-10 w-10 cursor-pointer text-center  bg-gray-200 rounded text-gray-600 hover:bg-gray-300  font-medium">
         3
       </span>
-      <span className="p-2 h-10 w-10 cursor-pointer text-center  bg-gray-600 rounded text-white   font-medium">
+      {/* on small screens just show 3 buttons */}
+      {/* <span className="p-2 h-10 w-10 cursor-pointer text-center  bg-gray-600 rounded text-white   font-medium">
         4
       </span>
       <span className="p-2 h-10 w-10 cursor-pointer text-center  bg-gray-200 rounded text-gray-600 hover:bg-gray-300    font-medium">
         5
-      </span>
+      </span> */}
       <span className="p-2 h-10 w-10 cursor-pointer text-center  bg-gray-200 rounded text-gray-600 hover:bg-gray-300   font-medium">
         <ChevronRightIcon className="h-6 w-6" />
       </span>
