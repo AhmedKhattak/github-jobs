@@ -15,7 +15,7 @@ export function JobCard({ handleOpen }) {
         </p>
       </div>
       <div className="flex flex-col items-end">
-        <p className="text-right text-xs text-white mb-4 bg-blue-600 rounded p-1  flex">
+        <p className="text-right text-xs text-gray-500 mb-4 rounded p-1  flex">
           <span className="mr-1">
             <GlobeIcon className="h-4 w-4 " />
           </span>

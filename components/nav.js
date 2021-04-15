@@ -30,35 +30,33 @@ export function Nav() {
       <nav className=" h-16 flex items-center md-plus:pt-5   z-50 relative ">
         <div className=" flex flex-row items-center justify-between w-full md:max-w-7xl md:mx-auto pl-3 pr-3 pb-3">
           <div className="flex items-center">
-            <Image width={20} height={20} src="/images/github.svg" />
-            <span className="text-xl text-indigo-900 ml-3 font-bold">
+            <Image width={20} height={20} src="/images/github-w.svg" />
+            <span className="text-xl text-white ml-3 font-bold">
               <Link href="/">GitHub Jobs</Link>
             </span>
           </div>
 
           <div
             onClick={toggle}
-            className=" md-plus:hidden transition border-2 p-2 cursor-pointer rounded"
+            className=" md-plus:hidden transition bg-gray-50 p-2 cursor-pointer rounded"
           >
             <MenuAlt3Icon className="h-5 w-5 hover:text-purple-600 sm:hidden text-indigo-900" />
           </div>
 
-          <div className="space-x-4 text-indigo-900 font-medium hidden sm:flex ">
+          <div className="space-x-3  font-medium hidden sm:flex text-indigo-900 ">
             <Link href="/about">
-              <p className="hover:underline rounded cursor-pointer  text-indigo">
-                About
-              </p>
+              <p className="  text-white">About</p>
             </Link>
 
             <a
-              className="hover:underline text-indigo"
+              className="   text-white  "
               href="https://www.linkedin.com/in/ahmedkhattak/"
               target="_blank"
             >
               LinkedIn
             </a>
             <a
-              className="hover:underline text-indigo"
+              className=" text-white"
               href="https://github.com/AhmedKhattak"
               target="_blank"
             >

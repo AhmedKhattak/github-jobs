@@ -34,11 +34,12 @@ module.exports = {
         DEFAULT: {
           css: {
             color: "#333",
+
             a: {
-              color: "#4C1D95",
+              color: "#1E40AF",
             },
             strong: {
-              color: "#4C1D95",
+              color: "black",
             },
           },
         },

@@ -3,6 +3,7 @@ import {
   ArrowLeftIcon,
   BriefcaseIcon,
   CollectionIcon,
+  ShareIcon,
   CursorClickIcon,
 } from "@heroicons/react/solid";
 import ReactMarkdown from "react-markdown";
@@ -59,50 +60,69 @@ export function Details({ show = false, handleClose }) {
             }`}
           >
             <div
-              className={`absolute  h-32 ${
+              className={`absolute   ${
                 toggleLayout && "rounded-t-md"
-              }     p-5 top-0 pt-6 border-l-2 border-r-2 border-t-2 border-b-2 border-black    bg-gray-900 left-0 right-0  z-50  items-center flex`}
+              }     p-4 top-0  border-l-2 border-r-2 border-t-2 border-b-2 border-black    bg-gray-900 left-0 right-0  z-50  `}
             >
-              <div
-                onClick={handleClose}
-                className="absolute top-4 right-4 cursor-pointer"
-              >
-                <XIcon className="h-6 w-6" />
-              </div>
-
-              <div className=" flex-shrink-0">
-                <Image
-                  objectFit="contain"
-                  className="bg-white rounded border "
-                  width={65}
-                  height={65}
-                  src="/vercel.svg"
-                />
-              </div>
-
-              <div className="ml-4  mr-12 w-full truncate ">
-                <p className="text text-white font-semibold truncate">
-                  WaveSense
-                </p>
-
-                <a
-                  className="underline text-white text-opacity-80 truncate "
-                  href="https://wavesense.recruitee.com"
+              <div className="items-center flex">
+                <div
+                  onClick={handleClose}
+                  className="absolute top-4 right-4 cursor-pointer"
                 >
-                  https://wavesense.recruitee.com
-                </a>
+                  <XIcon className="h-6 w-6" />
+                </div>
 
-                <p className="text-white mt-1 truncate ">Islamabad , PK</p>
+                <div className=" flex-shrink-0 self-start">
+                  <Image
+                    objectFit="contain"
+                    className="bg-white rounded border "
+                    width={65}
+                    height={65}
+                    src="/vercel.svg"
+                  />
+                </div>
+
+                <div className="ml-4  mr-12 w-full truncate ">
+                  <p className="text text-white font-semibold truncate">
+                    WaveSense
+                  </p>
+
+                  <a
+                    className="underline text-white text-opacity-80 truncate "
+                    href="https://wavesense.recruitee.com"
+                  >
+                    https://wavesense.recruitee.com
+                  </a>
+
+                  <p className="text-white mt-1 truncate ">Islamabad , PK</p>
+
+                  <div className="space-x-3 hidden md-plus:flex mt-2 mb-1 ml-[1.5px]">
+                    <button className="bg-purple-600 hover:bg-purple-700 p-1 pl-6 pr-6 h-10 rounded">
+                      Apply
+                    </button>
+                    <button className=" space-x-2 flex items-center rounded p-1 pl-3 pr-3">
+                      <span>Share</span> <ShareIcon className="h-5 w-5" />
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div className="space-x-3 md-plus:hidden  flex items-stretch w-full mt-2 mb-1 ml-[2px]">
+                <button className="bg-purple-600  flex-1 hover:bg-purple-700 p-1 pl-5 pr-5 h-10 rounded">
+                  Apply
+                </button>
+                <button className=" space-x-2 flex-1 flex items-center justify-center rounded p-1 pl-3 pr-3">
+                  <span>Share</span> <ShareIcon className="h-5 w-5" />
+                </button>
               </div>
             </div>
             <div
               style={{ height: toggleLayout ? "90vh" : "100vh" }}
               className={`overflow-scroll ${
                 toggleLayout && "rounded-t-md "
-              } rounded-t-md rounded-b-md border-l-2 border-r-2 border-b-2 border-gray-600  bg-white shadow-md prose max-w-none p-5 w-full`}
+              } rounded-t-md rounded-b-md border-l-2 border-r-2 border-b-2 border-gray-600  bg-white  prose max-w-none p-5 w-full`}
             >
               <ReactMarkdown
-                className=" pt-28 text-gray-900"
+                className=" pt-36 text-gray-900"
                 allowDangerousHtml
               >
                 {y}

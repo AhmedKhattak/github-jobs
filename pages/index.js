@@ -38,17 +38,37 @@ export default function Home() {
   return (
     <div className="mb-14">
       <div
-        style={{
-          backgroundImage:
-            "radial-gradient(#444cf7 1px, transparent 1px), radial-gradient(#444cf7 1px, #e5e5f7 1px)",
-          backgroundSize: "40px 40px",
-          backgroundPosition: "0 0,20px 20px",
-        }}
-        className="rounded p-4  md-plus:p-8 md-plus:pt-0 "
+        style={
+          {
+            // background: "url('/images/bg.svg')",
+            // backgroundSize: "cover",
+            // backgroundPosition: "0 0,20px 20px",
+          }
+        }
+        className="rounded p-4  relative  md-plus:p-8 md-plus:pt-0 "
       >
-        <Nav />
-        <Heading />
-        <SearchBox />
+        <div
+          style={{ zIndex: 0 }}
+          className="absolute top-0 left-0 right-0 bottom-0 h-full"
+        >
+          <img
+            src="/images/bg.svg"
+            style={{ width: "100%", height: "100%", objectFit: "cover" }}
+          />
+        </div>
+        <div
+          style={{
+            zIndex: 0,
+            backgroundImage:
+              "linear-gradient(0deg, rgba(255,255,255,0.00) 0%, rgba(69,29,184,0.54) 100%)",
+          }}
+          className="absolute top-0 left-0 right-0 bottom-0 h-full"
+        ></div>
+        <div className="relative">
+          <Nav />
+          <Heading />
+          <SearchBox />
+        </div>
       </div>
 
       <div className="w-full md:max-w-7xl md:mx-auto mt-36 p-4  pt-0">
