@@ -8,6 +8,7 @@ import { JobCard } from "../components/JobCard";
 import { Pagination } from "../components/pagination";
 import { Details } from "../components/details";
 import { useMediaQuery } from "react-responsive";
+import HeroBgSVG from "../public/images/bg.svg";
 
 export default function Home() {
   const [state, setState] = useState(false);
@@ -48,16 +49,17 @@ export default function Home() {
         className="rounded p-4  relative  md-plus:p-8 md-plus:pt-0 "
       >
         <div
-          style={{
-            backgroundImage: "url(/images/bg.svg)",
-            backgroundSize: "cover",
-          }}
+          // style={{
+          //   backgroundImage: "url(/images/bg.svg)",
+          //   backgroundSize: "cover",
+          // }}
           className="absolute top-0 left-0 right-0 bottom-0"
         >
           {/* <img
             style={{ width: "100%", height: "100%", objectFit: "cover" }}
             src="/images/bg.svg"
           /> */}
+          <HeroBgSVG width="100%" height="100%" />
         </div>
         <div
           style={{

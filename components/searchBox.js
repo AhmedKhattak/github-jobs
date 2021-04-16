@@ -1,14 +1,19 @@
 import { SearchIcon } from "@heroicons/react/solid";
+import PersonSVG from "../public/images/person.svg";
 export function SearchBox() {
   return (
     <div className="flex mt-8 items-center justify-center relative">
       <div className="relative container max-w-4xl">
-        <img
+        {/* <img
           className="absolute top-2 left-14"
           src="/images/Person.svg"
           width={100}
           height={200}
-        />
+        /> */}
+        <div className="absolute top-[-50px] left-20">
+          <PersonSVG width={100} height={200} />
+        </div>
+
         <div className="p-4 border-purple-200 border-2 relative top-24 bg-white rounded-lg  pt-6 shadow-xl">
           <div className="flex  flex-col md-plus:flex-row  flex-wrap md-plus:flex-nowrap items-start ">
             <div className="w-full md-plus:w-3/6  mr-4 order-1 md-plus:order-none">
@@ -17,7 +22,7 @@ export function SearchBox() {
               </p>
               <input
                 placeholder="React, Node, Java ..."
-                className=" outline-none transition focus:ring  focus:ring-purple-600 h-11 focus:border-purple-200 p-2 border-solid border-purple-200 border-2 w-full	 rounded  "
+                className=" appearance-none outline-none transition focus:ring  focus:ring-purple-600 h-11 focus:border-purple-200 p-2 border-solid border-purple-200 border-2 w-full	 rounded  "
                 type="text"
               />
               <div className=" flex  flex-row   flex-wrap ">
@@ -26,7 +31,7 @@ export function SearchBox() {
                     Full Time Only
                   </span>
                   <input
-                    className="w-4 h-4 transition rounded-sm text-purple-600 focus:ring-3 focus:ring-purple-400"
+                    className="w-4 h-4 appearance-none transition rounded-sm text-purple-600 focus:ring-3 focus:ring-purple-400"
                     type="checkbox"
                   />
                 </label>
@@ -39,7 +44,7 @@ export function SearchBox() {
               </p>
               <input
                 placeholder="Location"
-                className="outline-none transition focus:border-purple-200  border-purple-200  border-2  focus:ring focus:ring-purple-600 h-11 p-2 border-solid  w-full		 rounded  mr-4"
+                className="outline-none appearance-none transition focus:border-purple-200  border-purple-200  border-2  focus:ring focus:ring-purple-600 h-11 p-2 border-solid  w-full		 rounded  mr-4"
                 type="text"
               />
             </div>

@@ -9,7 +9,9 @@ import {
 import { motion, AnimatePresence } from "framer-motion";
 import { useMediaQuery } from "react-responsive";
 import ClickAwayListener from "react-click-away-listener";
-
+import GithubLineSVG from "../public/images/github.svg";
+import LinkedInSVG from "../public/images/linkedin.svg";
+import GithubSVG from "../public/images/github-l.svg";
 export function Nav() {
   const [s, setS] = useState(false);
   const toggle = () => {
@@ -30,7 +32,7 @@ export function Nav() {
       <nav className=" h-16 flex items-center md-plus:pt-5   z-50 relative ">
         <div className=" flex flex-row items-center justify-between w-full md:max-w-7xl md:mx-auto pl-3 pr-3 pb-3">
           <div className="flex items-center">
-            <Image width={20} height={20} src="/images/github-w.svg" />
+            <GithubLineSVG width={20} height={20} stroke="white" />
             <span className="text-xl text-white ml-3 font-bold">
               <Link href="/">GitHub Jobs</Link>
             </span>
@@ -38,7 +40,7 @@ export function Nav() {
 
           <div
             onClick={toggle}
-            className=" sm:hidden  hover:shadow-md  transition bg-gray-50 p-2 cursor-pointer rounded"
+            className=" sm:hidden border-2   hover:shadow-md  transition bg-gray-50 p-2 cursor-pointer rounded"
           >
             <MenuAlt3Icon className="h-5 w-5 hover:text-purple-600 sm:hidden text-indigo-900" />
           </div>
@@ -78,7 +80,8 @@ export function Nav() {
             >
               <div className="flex flex-row items-center  justify-between w-full  pl-[18px] pr-[18px]">
                 <div className="flex items-center">
-                  <Image width={20} height={20} src="/images/github.svg" />
+                  <GithubLineSVG width={20} height={20} />
+                  {/* <Image width={20} height={20} src="/images/github.svg" /> */}
                   <span className="text-xl text-indigo-900 ml-3 font-bold">
                     <Link href="/">GitHub Jobs</Link>
                   </span>
@@ -102,7 +105,7 @@ export function Nav() {
 
                 <div className=" no-underline font-medium cursor-pointer items-center flex space-x-3  transition   text-purple-900 pl-3 pt-3 pb-3 hover:bg-purple-200  rounded">
                   <div className="bg-purple-600 p-2 flex items-center justify-center rounded-md">
-                    <Image width={16} height={16} src="/images/linkedin.svg" />
+                    <LinkedInSVG width={16} height={16} />
                   </div>
 
                   <a
@@ -115,7 +118,7 @@ export function Nav() {
 
                 <div className=" no-underline font-medium cursor-pointer items-center flex space-x-3  transition   text-purple-900 pl-3 pt-3 pb-3 hover:bg-purple-200  rounded">
                   <div className="bg-purple-600 p-2 flex items-center justify-center rounded-md">
-                    <Image width={16} height={16} src="/images/github-l.svg" />
+                    <GithubSVG width={16} height={16} />
                   </div>
                   <a href="https://github.com/AhmedKhattak" target="_blank">
                     GitHub
