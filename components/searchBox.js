@@ -9,7 +9,7 @@ export function SearchBox() {
           width={100}
           height={200}
         />
-        <div className="border-2 p-4 border-purple-200 relative top-24 bg-white rounded-lg  pt-6 shadow-lg">
+        <div className="p-4 border-purple-200 border-2 relative top-24 bg-white rounded-lg  pt-6 shadow-xl">
           <div className="flex  flex-col md-plus:flex-row  flex-wrap md-plus:flex-nowrap items-start ">
             <div className="w-full md-plus:w-3/6  mr-4 order-1 md-plus:order-none">
               <p className="text-gray-900 mb-2 uppercase tracking-wide text-xs">
@@ -17,7 +17,7 @@ export function SearchBox() {
               </p>
               <input
                 placeholder="React, Node, Java ..."
-                className="outline-none transition focus:ring-2 focus:ring-purple-600 h-11 p-2 border-solid border-purple-200 border-2 w-full	 rounded  "
+                className=" outline-none transition focus:ring  focus:ring-purple-600 h-11 focus:border-purple-200 p-2 border-solid border-purple-200 border-2 w-full	 rounded  "
                 type="text"
               />
               <div className=" flex  flex-row   flex-wrap ">
@@ -25,7 +25,10 @@ export function SearchBox() {
                   <span className="mr-3 text-gray-900  text-sm">
                     Full Time Only
                   </span>
-                  <input className="w-4 h-4" type="checkbox" />
+                  <input
+                    className="w-4 h-4 transition rounded-sm text-purple-600 focus:ring-3 focus:ring-purple-400"
+                    type="checkbox"
+                  />
                 </label>
               </div>
             </div>
@@ -36,14 +39,14 @@ export function SearchBox() {
               </p>
               <input
                 placeholder="Location"
-                className="outline-none transition border-purple-200  border-2  focus:ring-2 focus:ring-purple-600 h-11 p-2 border-solid  w-full		 rounded  mr-4"
+                className="outline-none transition focus:border-purple-200  border-purple-200  border-2  focus:ring focus:ring-purple-600 h-11 p-2 border-solid  w-full		 rounded  mr-4"
                 type="text"
               />
             </div>
 
             <div className=" w-full md-plus:w-auto rounded md-plus:rounded-none flex md-plus:block justify-center   mt-4 md-plus:mt-0 order-2 md-plus:order-none">
               <p className="text-gray-300  text hidden md-plus:block">&nbsp;</p>
-              <button className="h-11 w-full md-plus:w-auto transition  ml-0 md:ml-2  flex items-center  justify-center text-white bg-purple-800 p-3 px-8 hover:bg-purple-600 rounded border-none ">
+              <button className="h-11 w-full md-plus:w-auto transition  ml-0 md:ml-2  flex items-center  justify-center text-white bg-purple-800 p-3 px-8 hover:bg-purple-600 rounded-md border-none ">
                 <span className="mr-2">Search</span>
                 <SearchIcon className="h-4 w-4 text-white" />
               </button>

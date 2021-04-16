@@ -3,7 +3,7 @@ export function Heading() {
     <>
       <p
         style={{
-          textShadow: "4px 4px 23px rgba(0, 0, 0, 0.02)",
+          textShadow: "4px 4px 23px rgba(0, 0, 0, 0.18)",
         }}
         className="text-5xl font-bold pt-9 md-plus:pt-16   text-left lg:text-center text-white"
       >

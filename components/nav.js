@@ -38,7 +38,7 @@ export function Nav() {
 
           <div
             onClick={toggle}
-            className=" md-plus:hidden transition bg-gray-50 p-2 cursor-pointer rounded"
+            className=" sm:hidden  hover:shadow-md  transition bg-gray-50 p-2 cursor-pointer rounded"
           >
             <MenuAlt3Icon className="h-5 w-5 hover:text-purple-600 sm:hidden text-indigo-900" />
           </div>
@@ -92,24 +92,35 @@ export function Nav() {
                 </div>
               </div>
               <div className="flex flex-col p-3">
-                <p className=" text-indigo pl-3 pt-3 pb-3 font-medium cursor-pointer hover:bg-purple-200 rounded">
-                  <Link href="/about">About</Link>
-                </p>
+                <div className=" no-underline font-medium cursor-pointer items-center flex space-x-3 transition   text-purple-900 pl-3 pt-3 pb-3 hover:bg-purple-200 rounded">
+                  <div className="bg-purple-600 p-1 flex items-center justify-center rounded-md">
+                    <QuestionMarkCircleIcon className="h-6 w-6 text-white " />
+                  </div>
 
-                <a
-                  className=" no-underline font-medium    text-indigo pl-3 pt-3 pb-3 hover:bg-purple-200 rounded"
-                  href="https://www.linkedin.com/in/ahmedkhattak/"
-                  target="_blank"
-                >
-                  LinkedIn
-                </a>
-                <a
-                  className=" no-underline font-medium  text-indigo pl-3 pt-3 pb-3 hover:bg-purple-200 rounded"
-                  href="https://github.com/AhmedKhattak"
-                  target="_blank"
-                >
-                  GitHub
-                </a>
+                  <Link href="/about">About</Link>
+                </div>
+
+                <div className=" no-underline font-medium cursor-pointer items-center flex space-x-3  transition   text-purple-900 pl-3 pt-3 pb-3 hover:bg-purple-200  rounded">
+                  <div className="bg-purple-600 p-2 flex items-center justify-center rounded-md">
+                    <Image width={16} height={16} src="/images/linkedin.svg" />
+                  </div>
+
+                  <a
+                    href="https://www.linkedin.com/in/ahmedkhattak/"
+                    target="_blank"
+                  >
+                    LinkedIn
+                  </a>
+                </div>
+
+                <div className=" no-underline font-medium cursor-pointer items-center flex space-x-3  transition   text-purple-900 pl-3 pt-3 pb-3 hover:bg-purple-200  rounded">
+                  <div className="bg-purple-600 p-2 flex items-center justify-center rounded-md">
+                    <Image width={16} height={16} src="/images/github-l.svg" />
+                  </div>
+                  <a href="https://github.com/AhmedKhattak" target="_blank">
+                    GitHub
+                  </a>
+                </div>
               </div>
             </motion.div>
           )}
