@@ -1,5 +1,5 @@
 import { SearchIcon } from "@heroicons/react/solid";
-import PersonSVG from "../public/images/person.svg";
+import PersonSVG from "../assets/person.svg";
 export function SearchBox() {
   return (
     <div className="flex mt-8 items-center justify-center relative">

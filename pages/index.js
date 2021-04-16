@@ -8,7 +8,7 @@ import { JobCard } from "../components/JobCard";
 import { Pagination } from "../components/pagination";
 import { Details } from "../components/details";
 import { useMediaQuery } from "react-responsive";
-import HeroBgSVG from "../public/images/bg.svg";
+import HeroBgSVG from "../assets/bg.svg";
 
 export default function Home() {
   const [state, setState] = useState(false);

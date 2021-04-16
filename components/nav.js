@@ -9,9 +9,9 @@ import {
 import { motion, AnimatePresence } from "framer-motion";
 import { useMediaQuery } from "react-responsive";
 import ClickAwayListener from "react-click-away-listener";
-import GithubLineSVG from "../public/images/github.svg";
-import LinkedInSVG from "../public/images/linkedin.svg";
-import GithubSVG from "../public/images/github-l.svg";
+import GithubLineSVG from "../assets/github.svg";
+import LinkedInSVG from "../assets/linkedin.svg";
+import GithubSVG from "../assets/github-l.svg";
 export function Nav() {
   const [s, setS] = useState(false);
   const toggle = () => {
