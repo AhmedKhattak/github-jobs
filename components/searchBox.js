@@ -4,17 +4,11 @@ export function SearchBox() {
   return (
     <div className="flex mt-8 items-center justify-center relative">
       <div className="relative container max-w-4xl">
-        {/* <img
-          className="absolute top-2 left-14"
-          src="/images/Person.svg"
-          width={100}
-          height={200}
-        /> */}
         <div className="absolute top-[-50px] left-20">
           <PersonSVG width={100} height={200} />
         </div>
 
-        <div className="p-4 border-purple-200 border-2 relative top-24 bg-white rounded-lg  pt-6 shadow-xl">
+        <div className="p-4 border-purple-200 border-2 relative top-24 bg-white rounded-lg  pt-6 shadow-lg">
           <div className="flex  flex-col md-plus:flex-row  flex-wrap md-plus:flex-nowrap items-start ">
             <div className="w-full md-plus:w-3/6  mr-4 order-1 md-plus:order-none">
               <p className="text-gray-900 mb-2 uppercase tracking-wide text-xs">

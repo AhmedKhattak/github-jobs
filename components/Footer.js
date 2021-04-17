@@ -7,11 +7,21 @@ export function Footer() {
     <footer className="bg-gray-900   p-8 ">
       <div className="md:max-w-7xl md:mx-auto space-y-5 ">
         <div className="flex items-center space-x-4">
-          <a href="https://www.linkedin.com/in/ahmedkhattak/" target="_blank">
+          <a
+            href="https://www.linkedin.com/in/ahmedkhattak/"
+            rel="noopener"
+            target="_blank"
+            aria-label="linkedin link"
+          >
             <LinkedInSVG width={20} height={20} />
           </a>
 
-          <a href="https://github.com/AhmedKhattak">
+          <a
+            href="https://github.com/AhmedKhattak"
+            rel="noopener"
+            target="_blank"
+            aria-label="github link"
+          >
             <GithubSVG width={20} height={20} />
           </a>
         </div>

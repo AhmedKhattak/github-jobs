@@ -2,6 +2,19 @@ module.exports = {
   future: {
     webpack5: true,
   },
+  async headers() {
+    return [
+      {
+        source: "/",
+        headers: [
+          {
+            key: "Bypass-Tunnel-Reminder",
+            value: "anything",
+          },
+        ],
+      },
+    ];
+  },
   webpack: (config, { buildId, dev, isServer, defaultLoaders, webpack }) => {
     // Note: we provide webpack above so you should not `require` it
     // Perform customizations to webpack config

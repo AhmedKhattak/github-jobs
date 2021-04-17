@@ -4,7 +4,7 @@ export function JobCard({ handleOpen, index }) {
     if (index === 0) {
       return `bg-white  group  shadow-md  rounded-tl-md rounded-tr-md  border  cursor-pointer   border-[1.7px]   border-gray-200 flex  justify-between p-4 pt-6 pb-6`;
     } else if (index === 9) {
-      return `bg-white  group  shadow-md mb-5  rounded-bl-md rounded-br-md  border  cursor-pointer   border-[1.7px]   border-gray-200 flex  justify-between p-4 pt-6 pb-6`;
+      return `bg-white  group  shadow mb-5  rounded-bl-md rounded-br-md  border  cursor-pointer   border-[1.7px]   border-gray-200 flex  justify-between p-4 pt-6 pb-6`;
     } else {
       return `bg-white  group  shadow-md  border  cursor-pointer   border-[1.7px]   border-gray-200 flex  justify-between p-4 pt-6 pb-6`;
     }

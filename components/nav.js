@@ -47,20 +47,24 @@ export function Nav() {
 
           <div className="space-x-3  font-medium hidden sm:flex text-indigo-900 ">
             <Link href="/about">
-              <p className="  text-white">About</p>
+              <p className=" cursor-pointer hover:underline  text-white">
+                About
+              </p>
             </Link>
 
             <a
-              className="   text-white  "
+              className="cursor-pointer hover:underline   text-white  "
               href="https://www.linkedin.com/in/ahmedkhattak/"
               target="_blank"
+              rel="noopener"
             >
               LinkedIn
             </a>
             <a
-              className=" text-white"
+              className="cursor-pointer hover:underline text-white"
               href="https://github.com/AhmedKhattak"
               target="_blank"
+              rel="noopener"
             >
               GitHub
             </a>
@@ -107,6 +111,7 @@ export function Nav() {
                 <a
                   href="https://www.linkedin.com/in/ahmedkhattak/"
                   target="_blank"
+                  rel="noopener"
                   className=" no-underline font-medium cursor-pointer items-center flex space-x-3  transition   text-purple-900 pl-3 pt-3 pb-3 hover:bg-purple-200  rounded"
                 >
                   <div className="bg-purple-600 p-2 flex items-center justify-center rounded-md">
@@ -119,6 +124,7 @@ export function Nav() {
                 <a
                   href="https://github.com/AhmedKhattak"
                   target="_blank"
+                  rel="noopener"
                   className=" no-underline font-medium cursor-pointer items-center flex space-x-3  transition   text-purple-900 pl-3 pt-3 pb-3 hover:bg-purple-200  rounded"
                 >
                   <div className="bg-purple-600 p-2 flex items-center justify-center rounded-md">
