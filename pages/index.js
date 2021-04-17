@@ -9,6 +9,7 @@ import { Pagination } from "../components/pagination";
 import { Details } from "../components/details";
 import { useMediaQuery } from "react-responsive";
 import HeroBgSVG from "../assets/bg.svg";
+import { Footer } from "../components/Footer";
 
 export default function Home() {
   const [state, setState] = useState(false);
@@ -37,7 +38,7 @@ export default function Home() {
     setState(true);
   };
   return (
-    <div className="mb-14">
+    <main>
       <div
         style={
           {
@@ -76,23 +77,22 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="w-full md:max-w-7xl md:mx-auto mt-36 p-4  pt-0">
+      <section className="w-full md:max-w-7xl md:mx-auto mt-36 p-4  pt-0">
         <div className="flex mt-16">
           <div className="w-full  md-plus:w-5/12   md-plus:mr-4 self-start">
             <div className="text text-gray-500 mb-4 font-medium">
               Showing 1 - 50 of 288 jobs
             </div>
-            {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 2, 3, 4, 5, 6, 7, 8].map(
-              (v, i) => (
-                <JobCard handleOpen={handleOpen} key={i} />
-              )
-            )}
+            {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((v, i) => (
+              <JobCard handleOpen={handleOpen} key={i} index={i} />
+            ))}
             <Pagination />
           </div>
           {/* <div className="sticky top-2  w-7/12 hidden md-plus:block   text-white self-start"> */}
           <Details show={state} handleClose={handleClose} />
         </div>
-      </div>
-    </div>
+      </section>
+      <Footer />
+    </main>
   );
 }

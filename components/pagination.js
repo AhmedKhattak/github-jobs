@@ -1,7 +1,7 @@
 import { ChevronRightIcon, ChevronLeftIcon } from "@heroicons/react/solid";
 export function Pagination() {
   return (
-    <div className="flex space-x-4">
+    <div className="flex space-x-4 mt-8 mb-8">
       <span className="p-2 h-10 w-10 cursor-pointer text-center  bg-gray-200 rounded text-gray-600 hover:bg-gray-300     font-medium">
         <ChevronLeftIcon className="h-6 w-6" />
       </span>

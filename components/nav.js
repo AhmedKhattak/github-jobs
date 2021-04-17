@@ -95,34 +95,61 @@ export function Nav() {
                 </div>
               </div>
               <div className="flex flex-col p-3">
-                <div className=" no-underline font-medium cursor-pointer items-center flex space-x-3 transition   text-purple-900 pl-3 pt-3 pb-3 hover:bg-purple-200 rounded">
-                  <div className="bg-purple-600 p-1 flex items-center justify-center rounded-md">
-                    <QuestionMarkCircleIcon className="h-6 w-6 text-white " />
+                <Link href="/about">
+                  <div className=" no-underline font-medium cursor-pointer items-center flex space-x-3 transition   text-purple-900 pl-3 pt-3 pb-3 hover:bg-purple-200 rounded">
+                    <div className="bg-purple-600 p-1 flex items-center justify-center rounded-md">
+                      <QuestionMarkCircleIcon className="h-6 w-6 text-white " />
+                    </div>
+                    <span>About</span>
                   </div>
+                </Link>
 
-                  <Link href="/about">About</Link>
-                </div>
-
-                <div className=" no-underline font-medium cursor-pointer items-center flex space-x-3  transition   text-purple-900 pl-3 pt-3 pb-3 hover:bg-purple-200  rounded">
+                <a
+                  href="https://www.linkedin.com/in/ahmedkhattak/"
+                  target="_blank"
+                  className=" no-underline font-medium cursor-pointer items-center flex space-x-3  transition   text-purple-900 pl-3 pt-3 pb-3 hover:bg-purple-200  rounded"
+                >
                   <div className="bg-purple-600 p-2 flex items-center justify-center rounded-md">
                     <LinkedInSVG width={16} height={16} />
                   </div>
 
-                  <a
-                    href="https://www.linkedin.com/in/ahmedkhattak/"
-                    target="_blank"
-                  >
-                    LinkedIn
-                  </a>
-                </div>
+                  <span>LinkedIn</span>
+                </a>
 
-                <div className=" no-underline font-medium cursor-pointer items-center flex space-x-3  transition   text-purple-900 pl-3 pt-3 pb-3 hover:bg-purple-200  rounded">
+                <a
+                  href="https://github.com/AhmedKhattak"
+                  target="_blank"
+                  className=" no-underline font-medium cursor-pointer items-center flex space-x-3  transition   text-purple-900 pl-3 pt-3 pb-3 hover:bg-purple-200  rounded"
+                >
                   <div className="bg-purple-600 p-2 flex items-center justify-center rounded-md">
                     <GithubSVG width={16} height={16} />
                   </div>
-                  <a href="https://github.com/AhmedKhattak" target="_blank">
-                    GitHub
-                  </a>
+                  <span>Github</span>
+                </a>
+                <div className="ml-3 space-y-3 mt-4 mb-2">
+                  <p className="text-gray-900 font-medium">
+                    Made with ❤️ &nbsp;in Islamabad
+                  </p>
+                  <div className="flex items-center">
+                    <iframe
+                      src="https://ghbtns.com/github-btn.html?user=AhmedKhattak&repo=covid-19-dashboard-react&type=star&count=true"
+                      frameBorder="0"
+                      scrolling="0"
+                      width="80"
+                      height="20"
+                      title="GitHub"
+                    ></iframe>
+
+                    <iframe
+                      style={{ marginLeft: "15px" }}
+                      src="https://ghbtns.com/github-btn.html?user=AhmedKhattak&repo=covid-19-dashboard-react&type=watch&count=true&v=2"
+                      frameBorder="0"
+                      scrolling="0"
+                      width="120"
+                      height="20"
+                      title="GitHub"
+                    ></iframe>
+                  </div>
                 </div>
               </div>
             </motion.div>

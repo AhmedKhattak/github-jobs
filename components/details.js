@@ -35,11 +35,9 @@ export function Details({ show = false, handleClose }) {
             style={{ height: "95vh" }}
             className="sticky top-5 mt-10 w-7/12 self-start z-[1]  "
           >
-            <div className="flex items-center h-16 rounded border-gray-300 border-[1px] bg-gray-50 p-2 ">
+            <div className="flex items-center h-16 rounded border-gray-300 border-[1px] bg-white p-2 ">
               <ArrowLeftIcon className="h-5 w-5 mr-4" />
-              <span className="text-lg font-medium">
-                Select a job to view its details
-              </span>
+              <span className="text-lg ">Select a job to view its details</span>
             </div>
           </motion.div>
         )}
@@ -119,7 +117,7 @@ export function Details({ show = false, handleClose }) {
               style={{ height: toggleLayout ? "90vh" : "100vh" }}
               className={`overflow-scroll ${
                 toggleLayout && "rounded-t-md "
-              } rounded-t-md rounded-b-md border-l-2 border-r-2 border-b-2 border-gray-600  bg-white  prose max-w-none p-5 w-full`}
+              } rounded-t-md shadow-md rounded-b-md border-l-2 border-r-2 border-b-2 border-gray-600  bg-white  prose max-w-none p-5 w-full`}
             >
               <ReactMarkdown
                 className=" pt-36 text-gray-900"
@@ -128,7 +126,9 @@ export function Details({ show = false, handleClose }) {
                 {y}
               </ReactMarkdown>
 
-              <ReactMarkdown allowDangerousHtml>{x}</ReactMarkdown>
+              <ReactMarkdown className="bg-white" allowDangerousHtml>
+                {x}
+              </ReactMarkdown>
             </div>
           </motion.div>
         )}
